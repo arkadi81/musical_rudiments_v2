@@ -23,16 +23,22 @@ reqs: python, pip, venv installed on system
 
 1. Create venv
 2. clone the repo into venv
-3. activate venv: in project root: source bin/activate
+3. activate venv: in project root: virtualenv venv && source venv/bin/activate
 3. install backend dependences: pip install -r requirements.txt
 4. install front end dev stuff: npm install
-5. run python server ./run.sh
+5. run python strawberry.py
 6. activate front end monitoring: (will watch for file changes and initiate browser sync) gulp
 
 git is predefined with gitignore stuff already
 add, commit, push, repeat from project root
  
+FEATURES AND TODO ITEMS
+- incorporate testing
+- incorporate db (SQLite) and crud capacity / ORM stuff
+- incorporate front end routing + history (may need middleware for browsersync to work properly)
 
 to start browsersync/autoreload/watch:
 go to homedir
 gulp
+
+

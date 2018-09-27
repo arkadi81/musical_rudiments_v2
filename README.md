@@ -26,7 +26,7 @@ reqs: python, pip, venv installed on system
 3. activate venv: in project root: source venv/bin/activate
 3. install backend dependences: pip install -r requirements.txt
 4. install front end dev stuff: npm install
-5. run python server ./run.sh
+5. run python server ./run.sh (or directly: python strawberry.py)
 6. activate front end monitoring: (will watch for file changes and initiate browser sync) gulp
 
 git is predefined with gitignore stuff already
@@ -40,3 +40,20 @@ if the runserver event is added to default, its easy to merge the two items, but
 to start browsersync/autoreload/watch:
 go to homedir
 gulp
+
+git is predefined with gitignore stuff already
+add, commit, push, repeat from project root
+ 
+FEATURES AND TODO ITEMS
+- incorporate testing
+- incorporate db (SQLite) and crud capacity / ORM stuff
+- incorporate front end routing + history (may need middleware for browsersync to work properly)
+- refactor directory structure
+- establish templates
+- incorporate session and login control
+- admin panel
+- testing
+- rewrite theory.js
+- mobile first design
+- update dependencies to modern(er) versions as needed
+- port generic part into a "stock version of a project" that can be cloned as a boilerplate
