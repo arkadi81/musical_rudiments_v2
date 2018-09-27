@@ -1,0 +1,98 @@
+2016-09-08 18:55:21 Thursday, User asdads began test.
+2016-09-08 18:56:17 Thursday, User asdads ended test.
+2016-09-08 19:00:39 Thursday, User qweqe began test.
+2016-09-08 19:01:25 Thursday, User asdasd began test.
+2016-09-08 19:01:51 Thursday, User asdasd ended test.
+2016-09-08 19:20:30 Thursday, User  began practice.
+2016-09-08 19:23:14 Thursday, User  began practice.
+2016-09-08 19:40:46 Thursday, User  began practice.
+2016-09-08 19:50:59 Thursday, User  began practice.
+2016-09-08 19:51:17 Thursday, User  began practice.
+2016-09-08 20:03:51 Thursday, User  began practice.
+2016-09-08 20:04:38 Thursday, User  began practice.
+2016-09-08 20:29:51 Thursday, User  began practice.
+2016-09-08 20:34:50 Thursday, User  began practice.
+2016-09-08 20:39:12 Thursday, User  began practice.
+2016-09-08 20:44:21 Thursday, User  began practice.
+2016-09-08 20:46:20 Thursday, User  began practice.
+2016-09-08 20:59:12 Thursday, User  began practice.
+2016-09-08 21:01:33 Thursday, User  began practice.
+2016-09-08 21:24:40 Thursday, User  began practice.
+2016-09-08 21:42:09 Thursday, User  began practice.
+2016-09-08 21:49:07 Thursday, User  began practice.
+2016-09-08 21:50:04 Thursday, User  began practice.
+2016-09-08 22:15:37 Thursday, User  began practice.
+2016-09-08 22:16:32 Thursday, User  began practice.
+2016-09-08 22:17:58 Thursday, User  began practice.
+2016-09-08 22:21:48 Thursday, User  began practice.
+2016-09-08 22:30:55 Thursday, User  began practice.
+2016-09-08 22:35:09 Thursday, User  ended practice.
+2016-09-08 22:42:32 Thursday, User  began practice.
+2016-09-08 22:51:00 Thursday, User  began practice.
+2016-09-08 22:53:38 Thursday, User  began practice.
+2016-09-08 22:56:31 Thursday, User  began practice.
+2016-09-09 07:11:05 Friday, User  began practice.
+2016-09-09 07:23:45 Friday, User  began practice.
+2016-09-09 07:39:28 Friday, User  began practice.
+2016-09-09 07:59:02 Friday, User  began practice.
+2016-09-09 08:07:38 Friday, User  began practice.
+2016-09-09 08:17:40 Friday, User  began practice.
+2016-09-09 08:19:52 Friday, User  ended practice.
+2016-09-09 08:26:06 Friday, User  began practice.
+2016-09-09 08:27:10 Friday, User  began practice.
+2016-09-09 08:27:56 Friday, User  ended practice.
+2016-09-09 08:27:57 Friday, User  ended practice.
+2016-09-09 08:34:48 Friday, User 50787 began test.
+2016-09-09 08:34:55 Friday, User 11625 began test.
+2016-09-09 08:34:59 Friday, User 80566 began test.
+2016-09-09 08:35:00 Friday, User 45821 began test.
+2016-09-09 08:35:01 Friday, User 76171 began test.
+2016-09-09 08:35:02 Friday, User 50494 began test.
+2016-09-09 08:35:05 Friday, User 15045 began test.
+2016-09-09 08:35:06 Friday, User 35513 began test.
+2016-09-09 08:35:10 Friday, User 96081 began test.
+2016-09-09 08:35:15 Friday, User 25768 began test.
+2016-09-09 08:35:20 Friday, User 56308 began test.
+2016-09-09 08:35:33 Friday, User 62401 began test.
+2016-09-09 08:35:44 Friday, User 93916 began test.
+2016-09-09 08:35:46 Friday, User 61134 began test.
+2016-09-09 08:35:47 Friday, User 53912 began test.
+2016-09-09 08:35:49 Friday, User 77458 began test.
+2016-09-09 08:35:54 Friday, User 53886 began test.
+2016-09-09 08:35:56 Friday, User 53747 began test.
+2016-09-09 08:36:00 Friday, User 55388 began test.
+2016-09-09 08:36:00 Friday, User 62886 began test.
+2016-09-09 08:36:04 Friday, User 98385 began test.
+2016-09-09 08:36:04 Friday, User 48848 began test.
+2016-09-09 08:36:04 Friday, User 93754 began test.
+2016-09-09 08:36:06 Friday, User 24039 began test.
+2016-09-09 08:36:07 Friday, User 52053 began test.
+2016-09-09 08:36:09 Friday, User 98819 began test.
+2016-09-09 08:36:09 Friday, User 98586 began test.
+2016-09-09 08:36:10 Friday, User 21693 began test.
+2016-09-09 08:36:13 Friday, User 90627 began test.
+2016-09-09 08:36:17 Friday, User 12000 began test.
+2016-09-09 08:36:18 Friday, User 82871 began test.
+2016-09-09 08:36:19 Friday, User 72223 began test.
+2016-09-09 08:36:27 Friday, User 85968 began test.
+2016-09-09 08:36:29 Friday, User 46899 began test.
+2016-09-09 08:36:34 Friday, User 90121 began test.
+2016-09-09 08:37:02 Friday, User 38326 began test.
+2016-09-09 08:37:05 Friday, User 13476 began test.
+2016-09-09 08:37:21 Friday, User 83998 began test.
+2016-09-09 08:37:34 Friday, User 47874 began test.
+2016-09-09 08:37:39 Friday, User 98456 began test.
+2016-09-09 08:38:40 Friday, User 89662 began test.
+2016-09-09 08:43:25 Friday, User 85066 began test.
+2016-09-09 08:52:31 Friday, User 53747 ended test.
+2016-09-09 08:54:44 Friday, User 98586 ended test.
+2016-09-09 08:55:57 Friday, User 50787 ended test.
+2016-09-09 08:57:24 Friday, User 21693 ended test.
+2016-09-09 08:57:28 Friday, User 45821 ended test.
+2016-09-09 08:58:44 Friday, User 24039 ended test.
+2016-09-09 09:00:10 Friday, User 95321 began test.
+2016-09-09 09:00:24 Friday, User 96081 ended test.
+2016-09-09 09:00:37 Friday, User 25768 ended test.
+2016-09-09 09:10:23 Friday, User 95321 ended test.
+2016-09-09 09:11:34 Friday, User  began practice.
+2016-09-09 14:50:37 Friday, User  began practice.

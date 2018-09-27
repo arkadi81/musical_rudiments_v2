@@ -1,0 +1,191 @@
+<!-- PURPOSE:
+	Question 1: given a clef and a pitch, identify the pitch
+-->
+
+<!-- Definitions of module title, instructions and options -->
+<script>
+
+	var moduleNumber = 1;
+
+	var moduleOptions = [];
+
+	var answerArray= [];
+	answerArray[moduleNumber]=[];
+
+	//var answerArray = [];
+
+	moduleOptions[moduleNumber] = {
+		'moduleHeadingText': 'Module '+ moduleNumber +': Pitch',
+		'moduleInstructions':'Identify the following pitches:',
+		'treble':2, // total questions in each of these clefs? used to be called q5Options / howManyQuestions 
+		'bass':2,
+		'alto':2,
+		clefSpan: 13, /* the amount of unique roots that a clef contains without 
+							accamulating too many ledger lines. we're assuming 
+							symmetrical above / below staff distribution */
+		totalQuestions: function() {return (this.treble+this.bass+this.alto);},
+
+		clefArray: function() {
+			// returns an array of text containing clefs based on the options above, e.g. ['treble','treble','bass']
+			var res =[];
+			for (i=0; i<this.treble; i++) { res.push('treble') };
+			for (i=0; i<this.bass; i++) { res.push('bass') };
+			for (i=0; i<this.alto; i++) { res.push('alto') };
+			return res;
+		},
+	}
+		
+</script>
+
+
+ <!-- DOM constructor -->
+<div class="panel panel-default" style="display:none" id="module1">
+  <div class="panel-heading">
+    <script>document.write(moduleOptions[moduleNumber].moduleHeadingText);</script>
+  </div>
+  <div class="panel-body" id="module1Container" align="center">
+  	<script> 
+  		// add instructions to module head
+  		document.getElementById('module'+moduleNumber+'Container').innerHTML+='<div>'+moduleOptions[moduleNumber].moduleInstructions+'</div>';
+
+
+  		// prepare selector
+  		selectionOptions = '';
+  			var res='';
+			for (i=0; i<rootNames.length; i++) 	{
+				selectionOptions += '<option>' + rootNames[i] +'</option>';
+			}
+			selectionOptions = '<select class="form-control">' + selectionOptions + '</select>';	
+			
+  		
+	
+		
+ 		for (i=0; i<moduleOptions[moduleNumber].totalQuestions();i++) {
+  			//dynamically build up the array of divs
+			document.getElementById('module'+moduleNumber+'Container').innerHTML+='<div class="col-sm-4 col-xs-6 center"  id="module'+ moduleNumber + 'Question'+i+'"></div>';
+		}
+		for (i=0; i<moduleOptions[moduleNumber].totalQuestions();i++) {
+  			//dynamically build up the array of canvases
+			document.getElementById('module'+moduleNumber+'Question'+i).innerHTML+='<table class="table"><tr><td><canvas height=100 width=200 id="module' + moduleNumber + 'Canvas'+i+'"></canvas></td>';
+			document.getElementById('module'+moduleNumber+'Question'+i).innerHTML+='<tr><td>'+selectionOptions+'</td>';
+			document.getElementById('module'+moduleNumber+'Question'+i).innerHTML+='<tr><td><div id="module'+moduleNumber+'Answer'+ i+'"></div></td>';
+			document.getElementById('module'+moduleNumber+'Question'+i).innerHTML+='<tr><td><div id="module'+moduleNumber+'Check'+ i+'"></div></td></table>';
+
+		}
+
+		// fill em up - this will be separated and only executed on load!!
+		if (global_theme_override) { document.getElementById('module'+moduleNumber).setAttribute('class','panel '+global_panel_class) };
+		if (global_visibility_override) { document.getElementById('module'+moduleNumber).setAttribute('style',global_initial_visibility)};
+
+		
+	</script>
+   </div>
+   <div class="panel-heading">
+   		<a class="navbar-btn btn btn-default" onClick="showNext()">Next</a>
+		<!-- this one isnt an include since its spechul and doesnt need
+		a prev button <a class="btn btn-default answer_check" href="showPrev()">Previous</a> -->
+		<a class="btn btn-default answer_check" OnClick="checkAnswers()">Check Answers</a>
+  </div>
+</div>
+   
+
+
+ <!---RANDOMIZING STAGE -->
+<script> // can definitely be made more efficient 12/16/2015
+	
+	// get predefined number of random pitches
+	//parameters: length, min, max
+	var res = getRandomArray(moduleOptions[moduleNumber].totalQuestions(),0,moduleOptions[moduleNumber].clefSpan); 
+	// for each random element of the array, create an associated note object
+	var randomNotes = []; // this is our array to fill with random pitches for display
+	var clefs = moduleOptions[moduleNumber].clefArray(); // array stores clefs for all quesions
+	
+	for (i=0; i < moduleOptions[moduleNumber].totalQuestions(); i++) {
+		
+		/*function createNoteInClef(clef,stepsAbove) {
+		//accepts a clef and creates a single note object based on a clef bottom and a random number which signifies the
+		//nnumber of root steps to go up. this is a modification of createRandomNote to accomodate for a group of random
+		// notes without repeats */
+	
+		randomNotes[i] = createNoteInClef(clefs[i],res[i]); // may be optional later. could just convert and output in single step
+		//console.log("the random number " + res[i] + " corresponds to " +randomNotes[i].getFullName());
+		//Note.prototype.render = function(clef, canvasColor, targetID,canvasWidth)
+		//randomNotes[i].render("bleh","bleh","module1Canvas"+i+1,200);
+
+		// dump answers here - in the form of note roots (C, D). there is no concern for accidentals in this question
+		answerArray[moduleNumber][i] = randomNotes[i].getRootName();
+		console.log ('q number ' + i + ' note name ' +answerArray[moduleNumber][i]);
+
+		canvasName = 'module' + moduleNumber + 'Canvas'+i;
+		var newCanvas = document.getElementById(canvasName);
+
+		//var canvas = $("div.one div.a canvas")[0];
+		var renderer = new Vex.Flow.Renderer(newCanvas,Vex.Flow.Renderer.Backends.CANVAS);
+		var ctx = renderer.getContext();
+		var stave = new Vex.Flow.Stave(0, 0,100);
+		
+		//stave.addKeySignature('C').setContext(ctx).draw();
+
+	  	// Create the notes
+	  	var notes = [
+    		// A whole-note C.
+    		new Vex.Flow.StaveNote({ clef:clefs[i], keys: [randomNotes[i].getRootName()+"/"+randomNotes[i].getOctave()], duration: "w", color:"black" })];
+
+
+    	var voice = new Vex.Flow.Voice ({
+    		num_beats: 1,
+    		beat_value: 1,
+    		resolution: Vex.Flow.RESOLUTION
+  		});
+
+  		// Add notes to voice
+  		voice.addTickables(notes);
+
+  		// Format and justify the notes to 500 pixels
+  		var formatter = new Vex.Flow.Formatter().
+  		joinVoices([voice]).format([voice], 200);
+
+		//attempt at changing color
+		//ctx.setStrokeStyle('yellow');
+		//ctx.setFillStyle('red');// woooo
+
+  		stave.addClef(clefs[i]).setContext(ctx).draw();
+  		// Render voice
+   		voice.draw(ctx, stave);
+  
+	}
+</script>
+<script>
+
+	checkAnswers = function() {
+		/*
+		 display correct answers for incorrect answers
+		 maybe highlight right and wrong selections 
+		 diplay V, X signs
+		save the fit between question asked and answer given, calculate score for this module, push score into global array
+		q/a identified by: module number, question number, the random question generated, 
+		correct answers, given answers, verification, score per question and for entire module
+		can use gloval_active_module to know where to push required answers */
+
+		var txt ="";
+
+		for (i=0; i<moduleOptions[moduleNumber].totalQuestions(); i++) {
+
+			// problem - polymorphism - cannot rely on modulenumber - it gets scrambled later
+			txt = 'Correct note is: ' + randomNotes[i].getRootName(); 
+			document.getElementById('module'+global_active_module+'Answer'+i).innerHTML += txt;
+
+			//selectors must have ids to pull data from
+
+			//if txt = 
+			//document.getElementById('module' + moduleNumber +'Check'+i).innerHTML+='<span class="glyphicon glyphicon-ok"></span>'; // ' remove for X'
+			
+		}
+
+	}	
+
+	
+</script>
+
+
+ 	

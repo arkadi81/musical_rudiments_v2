@@ -1,0 +1,8 @@
+2018-08-08 01:00:39,::1,ANON,practice,Allocated time,untimed,Time elapsed at submission,untimed,Grade:,0,of,63,=,0,%.
+2018-08-08 01:01:28,::1,ANON,practice,Allocated time,untimed,Time elapsed at submission,untimed,Grade:,0,of,63,=,0,%.
+2018-08-08 01:05:31,::1,ANON,practice,Allocated time,untimed,Time elapsed at submission,untimed,Grade:,0,of,63,=,0,%.
+2018-08-08 01:10:52,::1,ANON,practice,Allocated time,untimed,Time elapsed at submission,untimed,Grade:,0,of,63,=,0,%.
+2018-08-08 01:13:33,::1,ar,test,Allocated time,25:00,Time elapsed at submission,00:04,Grade:,0,of,63,=,0,%.
+2018-08-08 01:18:29,::1,ANON,practice,Allocated time,untimed,Time elapsed at submission,untimed,Grade:,0,of,63,=,0,%.
+2018-08-08 01:20:51,::1,asdasd,test,Allocated time,25:00,Time elapsed at submission,00:56,Grade:,0,of,63,=,0,%.
+2018-08-08 01:22:51,::1,sasddasd,test,Allocated time,01:00,Time elapsed at submission,01:00,Grade:,0.5,of,63,=,0,%.
