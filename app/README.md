@@ -42,3 +42,5 @@ go to homedir
 gulp
 
 
+20180927
+ideas for quicker development: ideally (maybe), logic could move to back end. for the time being, keep logic on front end, and just refactor the introduction of templating (server / client?!), knockout and event handler bootstrapping

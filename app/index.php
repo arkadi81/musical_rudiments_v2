@@ -11,6 +11,7 @@
 
 	<title>UVic Music Rudiments</title>
 
+	<!-- <script data-main="/" src="require.js"></script>  -->
 	<!--
 	Dependencies:
 	Bootstrap, Jquery, Vexflow, Vextab, Vextab debug, external css (my own), raphael, ajax/part of jquery api
@@ -18,14 +19,14 @@
 	TODO, move to git to eliminate internal version control remarks
 	-->
 	
-	<!--
-
-	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script> 
-	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="scripts/jquery/jquery-3.1.0.js"></script>
+	<script src="scripts/knockout/knockout-3.4.2.js"></script>
 	
+    <!-- <script src="http://knockoutjs.com/downloads/knockout-3.0.0.debug.js"></script> -->
 
-	<!--<script data-main="/" src="require.js"></script>  -->
-	<!--<script src="jquery.js"></script>-->
+	<!-- <script src="scripts/knockout-amd-helpers/knockout-amd-helpers.js"></script>	 -->
+
+	
 	<!--<script src="vexflow/releases/vexflow-min.js"></script>-->
 	<script src="scripts/raphael/raphael.js"></script>
 	<script src="vextab/releases/vextab-div.js"></script> <!-- MUST COME BEFORE VEXFLOW-DEBUG-->
@@ -63,42 +64,7 @@
 	<!-- Optional theme -->
 	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 	-->
-	<style>
-		/* this is here so that the navbars top and bottom dont cut into the content */
-		@media screen and (min-width: 100px) {
-  			body {
-    			padding-top: 60px;
-    			padding-bottom: 42px;
-  			}
-		}
-		.vert-align {
-    		vertical-align: middle;
-		}
-		.parent {
- 			 position: relative;
-		}
-		.child {
- 		 	position: absolute;
-  			top: 50%;
-			transform: translateY(-50%);
-		}
-
-		.bgimage {
-			/*background-image: url(Dynamic-edge.jpg);*/
-			background-size: 100%;
-
-		}
-
-		@media print {
-			body {
-				padding-top: 0px;
-				padding-bottom: 0px;
-			}
-		}	
-
-
-	</style>
-
+	
 	
 
 	<script type="text/javascript" src="global_options.js"></script>
@@ -106,10 +72,9 @@
 
 	<!-- my very own custom print media type sheet. place after bootstrap-->
 	<link rel="stylesheet" type="text/css" href="styles/print.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="styles/screen.css">
 
-	<script>
-		//console.log = function() {}
-	</script>
+	<script type="text/javascript" src="init.js"></script>
 
 </head>
 <body>
@@ -271,7 +236,7 @@
 
 				
 				
-				<p class="navbar-text pull-right">version 1.2, last updated 01/30/2017</p>
+				<p class="navbar-text pull-right">version 1.21, last updated 08/08/2018</p>
 		    </div>
 		</nav>
 
@@ -295,6 +260,8 @@
 						?>
 					</span>
 				</div>
+
+				
 				
 				<?php
 					if (!isset($_SESSION["mode"])) {
@@ -326,6 +293,11 @@
 		 		?>
 			</div>
 		</div>
+		<div class="test-div">
+			<!-- test to see if knockout injection works -->
+			<div data-bind="template: { name: 'test-template', data: testData, afterRender: draw}"></div>
+			
+		</div>
 		<?php
 			if ($dumpModules) {
 				// in session, ok to print everything
@@ -333,6 +305,19 @@
 
 			}
 		?>
+		<!-- phone test module -->
+		<div class="flex-container">
+					<div>1</div>
+					<div>2</div>
+					<div>3</div>
+					<div>4</div>
+					<div>5</div>
+					<div>6</div>
+					<div>7</div>
+					<div>8</div>
+					<div>9</div>
+				</div>
+		<!-- end phone test module -->
 
 		<!-- bottom navbar -->
 		<div class="navbar navbar-default navbar-fixed-bottom">
@@ -389,7 +374,25 @@
 			//'time=4/4',
 			//'notes :8 C-E/4 :16 A-A-A/4 ^3^ :8 A/4 :8d A/4 :16 A/4 :16 A-A-A-A-A/4 ^5^ =|='].join('\n');
 		</script>
+
+		<script type="text/html" id="test-template">
+			<div class="test-grid-container">
+				<div class="header red" data-bind="text: questionHeader">header here</div>
+				<div class="instruction red">instruction</div>
+				<div class="example red">example</div>
+				<div class="lpanel red">left</div>
+				<canvas class="canvaspanel red" data-bind="updataCanvasOnChange: note"></canvas>
+				<div class="rpanel red">right</div>
+				<div class="answercheck red" data-bind="text: note">answer</div>
+				<div class="controls red">controls here</div>
+				<div class="footer red">
+					footer here
+					<div class="btn" data-bind="click: $root.randomizeNote">I'm a button, click me to randomize</div>
+				</div>
+			</div>
+		</script>
 		
 
 	</body>
 </html>
+
