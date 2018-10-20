@@ -1,3 +1,0 @@
-AuthType Basic
-AuthName "Restricted Access"
-Require user  dbroome futerman hkrebs dclenman anitabon arams
