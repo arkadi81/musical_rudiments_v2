@@ -16,13 +16,13 @@ The first version of this application relied on HTML/JS/JQuery/PHP. Due to the u
 * [x] Refactoring of the directory structure to better support separation of concerns, testing and scalability
 * [x] Incorporation of a more robust web server and framework (currently using Python/bottle, with future support for relational database to store exam results and options for admin access)
 * [x] BrowserSync and livereload for easier development
-* [] Incorporate templates to enhanse ability to reuse UI code and logic (currently using bottle simple templating engine)
-* [] Incorporate client side routing so as to make the application reload less pages while in practice mode
-* [] Incorporate code unit testing (and hopefully E2E, eventually)
-* [] Add more robus session and login control
-* [] Clean up the code related to the music theory engine, originally in theory.js
-* [] Update dependencies to modern(er) versions as needed
-* [] Use this project as a learning tool and boilerplate for future, small MVC/SPA work.  be cloned as a boilerplate
+* [ ] Incorporate templates to enhanse ability to reuse UI code and logic (currently using bottle simple templating engine)
+* [ ] Incorporate client side routing so as to make the application reload less pages while in practice mode
+* [ ] Incorporate code unit testing (and hopefully E2E, eventually)
+* [ ] Add more robus session and login control
+* [ ] Clean up the code related to the music theory engine, originally in theory.js
+* [ ] Update dependencies to modern(er) versions as needed
+* [ ] Use this project as a learning tool and boilerplate for future, small MVC/SPA work.  be cloned as a boilerplate
 
 ## Setup on development machine
 
