@@ -5,10 +5,10 @@ This project is an expansion of the orignal musical rudiments project, found at 
 
 ## Goals for this iteration
 ### User features
-[] Mobile first design
-[] Better cross browser compatibility and accessibility support
-[] An admin panel to allow for access and modification of options / types / amounts of questions, ability to monitor testing and download test results.
-[] Expanded UI which will allow for faster and more approachable interaction with the application, including handheld devices.
+* Mobile first design
+* Better cross browser compatibility and accessibility support
+* An admin panel to allow for access and modification of options / types / amounts of questions, ability to monitor testing and download test results.
+* Expanded UI which will allow for faster and more approachable interaction with the application, including handheld devices.
 
 ### Development features
 The first version of this application relied on HTML/JS/JQuery/PHP. Due to the use of pure Javascript to produce dynamic GUI, and the lack of templating support, much of the code must be reiterated in various sections, rendering the application harder to maintain, expand in debug. In this version, goals include:
